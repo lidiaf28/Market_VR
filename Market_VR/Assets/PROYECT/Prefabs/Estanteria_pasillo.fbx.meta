@@ -68,12 +68,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Merged_materials
-    second: {fileID: 2100000, guid: 325def28e51d0834194154997da47f1d, type: 2}
+    second: {fileID: 2100000, guid: 022944915fba552429530a0ff7efbf82, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Wood_Cherry_Original_2_0
-    second: {fileID: 2100000, guid: 748e2750824fbb34bb327576097faac3, type: 2}
+    second: {fileID: 2100000, guid: d334c3f72e6000843b61980edb2f1a32, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
