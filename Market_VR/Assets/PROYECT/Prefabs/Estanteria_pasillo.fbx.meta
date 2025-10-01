@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: e4310b9bd832d314ab09ff83ae8343f4
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1273232063_75f9c47476
+    second: {fileID: 2100000, guid: 75d8ec40fcd046d46b29a12fa4659939, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1273233601_2364a0c526
+    second: {fileID: 2100000, guid: 3629ab9af7202494bb4b6430e0d22356, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1273237344_10a297ad97
+    second: {fileID: 2100000, guid: ccb3b9f9271e3bc40be5070f34fb0cbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1276243362_13f34c0b54
+    second: {fileID: 2100000, guid: 13def736f86dabb4d939e3b2efb50164, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1283349665_515f4ee225
+    second: {fileID: 2100000, guid: 392c195d54160a54d9dd87f6158bc1c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1283349668_0a94683cfa
+    second: {fileID: 2100000, guid: b816b83228570e542ac69eaa9d84eb86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1283350233_2ef37fbd9a
+    second: {fileID: 2100000, guid: 6151fcee0101d53449d9bb9526ec7c87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1283562075_11efa390ae
+    second: {fileID: 2100000, guid: 43198a04163c4254d8f39976c485c107, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1284772219_b8343d9e5f
+    second: {fileID: 2100000, guid: 548accfbebddfdf44b69d6c078e7679d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 60x260_1284772221_c793a2518a
+    second: {fileID: 2100000, guid: 437f4ce9e6174e64a82ceaaefd13421a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 800361334280
+    second: {fileID: 2100000, guid: b1c98c273febff84d85a03442689a374, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fitness_Fruits_Nestle
+    second: {fileID: 2100000, guid: 9ed919c0c00a3f64fa98b359e542a4ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Merged_materials
+    second: {fileID: 2100000, guid: 325def28e51d0834194154997da47f1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Cherry_Original_2_0
+    second: {fileID: 2100000, guid: 748e2750824fbb34bb327576097faac3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Z0_3159470001011
+    second: {fileID: 2100000, guid: 9bf57b278a2434d4bad12fb1f268a604, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Z0_3159470001424
+    second: {fileID: 2100000, guid: 8ad0923b51cb9ca48923c7b45167391d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Z0_3421557501630
+    second: {fileID: 2100000, guid: f2d974c00ecb72743898978f06f995d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cereale_vanille_bio_babybio_1987147088
+    second: {fileID: 2100000, guid: 434e9e96212f9114aaea08f51605b6b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: choc_o_barre_cereale_6_x_25g_kalibio_2185733279
+    second: {fileID: 2100000, guid: 0c2a8b7862f7ae9419a11af75d6ec421, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fiche_bibops1256825754
+    second: {fileID: 2100000, guid: 422c426658964ca4f9e315c0911d7ed7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: img1_2110
+    second: {fileID: 2100000, guid: a66e4c664e1711b4589be4f79fb0e5a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kelloggs_cereal_coupons
+    second: {fileID: 2100000, guid: 578483f67dc08e84090bba1422df6ff9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: muesliomega3_v
+    second: {fileID: 2100000, guid: a6a30d7e34c77c5489ca37f43252d7a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: primeal_chataign_pops
+    second: {fileID: 2100000, guid: f33cb483056bda8458dcefe71890c304, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vegetarisme_lima_corn_flake_600883823
+    second: {fileID: 2100000, guid: 6f57a4cd33042074cabaf4bdcac06c90, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
