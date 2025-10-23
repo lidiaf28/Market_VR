@@ -85,7 +85,13 @@ public class ShowObjectInfoXR : MonoBehaviour
 
             // Cuando llega a la posición final, deja de mover
             if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
+            {
                 isMoving = false;
+
+                // 🔹 Activamos el panel justo al llegar a destino
+                if (infoPanel != null)
+                    infoPanel.SetActive(true);
+            }
         }
     }
     public void ReturnToOriginalPosition() //llamar desde boton cerrar de la ventana
@@ -111,6 +117,10 @@ public class ShowObjectInfoXR : MonoBehaviour
 
         // Reiniciamos flag para poder seleccionarlo otra vez
         hasMoved = false;
+
+        // Ocultamos el panel al volver
+        if (infoPanel != null)
+            infoPanel.SetActive(false);
 
         // Opcional: ocultar panel al volver
         if (infoPanel != null)
