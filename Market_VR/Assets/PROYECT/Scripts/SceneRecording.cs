@@ -14,7 +14,12 @@ public class SceneRecording : MonoBehaviour
     private RecorderController recorderController;
 #endif
 
+    [Header("Cámara XR")]
     public Camera cameraToRecord;
+    public bool grabRightEye = false; // false = centrado, true = ojo derecho
+    public float ipd = 0.067f; // distancia interpupilar
+
+    private Vector3 originalLocalPos;
 
     void Start()
     {
@@ -31,7 +36,18 @@ public class SceneRecording : MonoBehaviour
             return;
         }
 
-        Debug.Log("🎥 Iniciando grabación del GameView...");
+        // Guardamos posición original
+        originalLocalPos = cameraToRecord.transform.localPosition;
+
+        // Aplicamos offset temporal
+
+        if (grabRightEye)
+            cameraToRecord.transform.localPosition += new Vector3(ipd, 0f, 0f);   // ojo derecho
+        else
+            cameraToRecord.transform.localPosition += new Vector3(ipd / 2f, 0f, 0f); // centrado
+
+        Debug.Log($"🎥 Iniciando grabación del GameView (offset aplicado: {cameraToRecord.transform.localPosition.x - originalLocalPos.x:F4} m)");
+
 
         var controllerSettings = ScriptableObject.CreateInstance<RecorderControllerSettings>();
         recorderController = new RecorderController(controllerSettings);
@@ -45,25 +61,25 @@ public class SceneRecording : MonoBehaviour
         string folderPath = Path.Combine(Application.dataPath, "Recordings");
         Directory.CreateDirectory(folderPath);
         movieRecorder.OutputFile = Path.Combine(folderPath,
-            "recording_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss"));
+            "recording_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss_Unity") + "_Unity");
 
         // Configuración de entrada: captura GameView
         var gameViewInput = new GameViewInputSettings
         {
-            OutputWidth = 1920,
-            OutputHeight = 1080
+            OutputWidth = 1600, //1920
+            OutputHeight = 1200 //1080
         };
         movieRecorder.ImageInputSettings = gameViewInput;
 
         controllerSettings.AddRecorderSettings(movieRecorder);
         controllerSettings.SetRecordModeToManual();
-        controllerSettings.FrameRate = 30f;
+        controllerSettings.FrameRate = 20f;
         controllerSettings.CapFrameRate = true;
 
         recorderController.PrepareRecording();
         recorderController.StartRecording();
 
-        Debug.Log("✅ Grabación del GameView iniciada.");
+        Debug.Log("✅ Grabación de Unity iniciada.");
 #else
         Debug.LogWarning("Solo funciona en el Editor de Unity.");
 #endif
@@ -76,6 +92,12 @@ public class SceneRecording : MonoBehaviour
         {
             recorderController.StopRecording();
             Debug.Log("🛑 Grabación detenida.");
+        }
+        // Restauramos posición original
+        if (cameraToRecord != null)
+        {
+            cameraToRecord.transform.localPosition = originalLocalPos;
+            Debug.Log("🔁 Posición de cámara restaurada.");
         }
 #endif
     }

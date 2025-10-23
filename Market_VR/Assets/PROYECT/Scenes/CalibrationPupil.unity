@@ -1732,6 +1732,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraToRecord: {fileID: 983876535}
+  grabRightEye: 1
+  ipd: 0.067
 --- !u!114 &2037992975
 MonoBehaviour:
   m_ObjectHideFlags: 0
