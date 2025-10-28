@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3357161528826113680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5538896802340681181, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_Name
+      value: LidiaAvatar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134770667242713038, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bea63b6083163f247878bb28fe8da8be, type: 2}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218135928203176529, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5538896802340681181, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 208140613564928861}
+    - targetCorrespondingSourceObject: {fileID: 5538896802340681181, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1218313580059769393}
+  m_SourcePrefab: {fileID: 100100000, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+--- !u!1 &7082215889367046989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5538896802340681181, guid: 8173996eb08c2d543956944ec9c7392f, type: 3}
+  m_PrefabInstance: {fileID: 3357161528826113680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &208140613564928861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7082215889367046989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8112819fa10b2549869292e920d4a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkDuration: 0.1
+  blinkInterval: 3
+--- !u!114 &1218313580059769393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7082215889367046989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf4ff6de4560d44d9b3b0697e00c1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClip: {fileID: 0}
+  AudioSource: {fileID: 0}
+  AudioProvider: 0
