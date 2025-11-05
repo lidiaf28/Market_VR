@@ -27,6 +27,10 @@ public class NeonEventSender : MonoBehaviour
     }
     //Los eventos quedan en eye_events.json, con timestamps
 
+    public void SendNewEvent(string eventName) //método genérico para enviar cualquier evento
+    {
+        StartCoroutine(SendEvent(eventName));
+    }
 
     private IEnumerator SendEvent(string action)
     {
@@ -63,7 +67,7 @@ public class NeonEventSender : MonoBehaviour
     private void OnApplicationQuit()
     {
         Debug.Log("Unity se está cerrando — enviando evento STOP automáticamente...");
-        SendStopRecording();
+        //SendStopRecording();
     }
 
 

@@ -16,6 +16,7 @@ public class ShowObjectInfoXR : MonoBehaviour
     public float additionalRotationY = 0f; // Rotación extra sobre Y para que se gire más
     public float additionalRotationX = 0f;
     public float additionalRotationZ = 0f;
+    [SerializeField] private float rotationSpeed = 2f;
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable;
     private bool hasMoved = false;
@@ -24,7 +25,7 @@ public class ShowObjectInfoXR : MonoBehaviour
     //Guarda la posición y rotación inicial del objeto en la escena.
     private Vector3 originalPosition;
     private Quaternion originalRotation;
-
+    
 
 
     void Start()
@@ -55,9 +56,6 @@ public class ShowObjectInfoXR : MonoBehaviour
             isMoving = true;
             hasMoved = true;
         }
-
-        if (infoPanel != null)
-            infoPanel.SetActive(true);
     }
 
     private void CalculateTargetPosition()
@@ -82,6 +80,11 @@ public class ShowObjectInfoXR : MonoBehaviour
         {
             // Interpolación hacia la posición objetivo
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+            // Rotación suave hacia la rotación objetivo
+            Quaternion targetRotation = Quaternion.Euler(additionalRotationX, additionalRotationY, additionalRotationZ);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
 
             // Cuando llega a la posición final, deja de mover
             if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
