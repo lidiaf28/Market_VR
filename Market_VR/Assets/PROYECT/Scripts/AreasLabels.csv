@@ -1,7 +1,7 @@
 Area;P1;P2
-Ventana;(-374;251);(374;-278)
-Etiqueta;(-270;219);(270;-247)
-Logo;(17;174);(220;-36)
-InfoNutricional;(-240;169);(-38;-197)
-PlanetScore;(6;-53);(236;-204)
-VentanaCentro;(0;0)
+Ventana;(-374, 251);(374, -278)
+Etiqueta;(-270, 219);(270, -247)
+Logo;(17, 174);(220, -36)
+InfoNutricional;(-240, 169);(-38, -197)
+PlanetScore;(6, -53);(236, -204)
+VentanaCentro;(0, 0)

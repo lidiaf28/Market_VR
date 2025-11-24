@@ -62,8 +62,7 @@ public class LabelAreasToCSV : MonoBehaviour
     private void EscribirLineaPunto(StreamWriter writer, string area, Transform p)
     {
         Vector3 localP = p.localPosition;
-        string posStr = $"({localP.x.ToString(CultureInfo.InvariantCulture)};" +
-                        $"{localP.y.ToString(CultureInfo.InvariantCulture)})";
+        string posStr = $"({localP.x.ToString(CultureInfo.InvariantCulture)}, {localP.y.ToString(CultureInfo.InvariantCulture)})";
 
         writer.WriteLine($"{area};{posStr}");
     }
@@ -73,11 +72,8 @@ public class LabelAreasToCSV : MonoBehaviour
         Vector3 localP1 = p1.localPosition;
         Vector3 localP2 = p2.localPosition;
 
-        string p1Str = $"({localP1.x.ToString(CultureInfo.InvariantCulture)};" +
-                       $"{localP1.y.ToString(CultureInfo.InvariantCulture)})";
-
-        string p2Str = $"({localP2.x.ToString(CultureInfo.InvariantCulture)};" +
-                       $"{localP2.y.ToString(CultureInfo.InvariantCulture)})";
+        string p1Str = $"({localP1.x.ToString(CultureInfo.InvariantCulture)}, {localP1.y.ToString(CultureInfo.InvariantCulture)})";
+        string p2Str = $"({localP2.x.ToString(CultureInfo.InvariantCulture)}, {localP2.y.ToString(CultureInfo.InvariantCulture)})";
 
         writer.WriteLine($"{area};{p1Str};{p2Str}");
     }
