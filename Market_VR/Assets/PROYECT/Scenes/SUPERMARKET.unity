@@ -6901,6 +6901,8 @@ MonoBehaviour:
   infoPanel: {fileID: 976469040}
   eventName: V1
   userCamera: {fileID: 0}
+  moveSpeed: 1
+  moveDistance: 0
 --- !u!1001 &415939369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7423,10 +7425,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 976469040}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 414211197}
+        m_TargetAssemblyTypeName: ShowPanel, Assembly-CSharp
+        m_MethodName: ClosePanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14811,7 +14813,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 581522140}
   eventName: V2
-  userCamera: {fileID: 0}
+  userCamera: {fileID: 568923309}
+  moveSpeed: 0.5
+  moveDistance: 0.3
 --- !u!1 &962266271
 GameObject:
   m_ObjectHideFlags: 0
@@ -15204,6 +15208,8 @@ MonoBehaviour:
   infoPanel: {fileID: 1631775879}
   eventName: V3
   userCamera: {fileID: 0}
+  moveSpeed: 1
+  moveDistance: 0
 --- !u!1001 &973081703
 PrefabInstance:
   m_ObjectHideFlags: 0
