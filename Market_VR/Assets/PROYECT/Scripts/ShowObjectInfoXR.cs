@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using static ReadyPlayerMe.Core.Analytics.Constants;
+using static Unity.Burst.Intrinsics.Arm;
 
 public class ShowObjectInfoXR : MonoBehaviour
 {
     [Header("Panel de informacion")]
     public GameObject infoPanel;  // Asigna en el inspector
-
+    NeonEventSender neon;
+    public string eventName; // Nombre del evento a enviar al Neon
     public Transform userCamera;
     public float approachDistance = 0.7f; // Cuánto se acerca el objeto
     public float moveSpeed = 1.5f;        // Velocidad de movimiento hacia el usuario
@@ -18,6 +21,7 @@ public class ShowObjectInfoXR : MonoBehaviour
     public float additionalRotationZ = 0f;
     [SerializeField] private float rotationSpeed = 2f;
 
+
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable;
     private bool hasMoved = false;
     private Vector3 targetPosition; //Representa dónde queremos que se desplace el objeto para que quede frente al usuario.
@@ -25,6 +29,7 @@ public class ShowObjectInfoXR : MonoBehaviour
     //Guarda la posición y rotación inicial del objeto en la escena.
     private Vector3 originalPosition;
     private Quaternion originalRotation;
+
     
 
 
@@ -39,6 +44,8 @@ public class ShowObjectInfoXR : MonoBehaviour
         // Guardamos la posición y rotación original
         originalPosition = transform.position;
         originalRotation = transform.rotation;
+
+        neon = FindObjectOfType<NeonEventSender>(); //Buscamos el NeonEventSender en la escena
     }
 
     private void OnDestroy()
@@ -50,6 +57,8 @@ public class ShowObjectInfoXR : MonoBehaviour
 
     void OnSelect(SelectEnterEventArgs args)
     {
+        neon.SendNewEvent(eventName + "_Open" );
+
         if (!hasMoved)
         {
             CalculateTargetPosition();
