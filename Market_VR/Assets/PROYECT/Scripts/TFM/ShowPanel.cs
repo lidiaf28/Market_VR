@@ -22,7 +22,7 @@ public class ShowPanel : MonoBehaviour
 
     private Vector3 startPosition;
     private Vector3 targetPosition;
-    private bool isMoving = false; // Para evitar dobles clics
+
     private bool isOpen = false;
 
 
@@ -58,6 +58,7 @@ public class ShowPanel : MonoBehaviour
 
     void OnSelect(SelectEnterEventArgs args)
     {
+        neon.SendNewEvent(eventName + "_Open");
         if (isOpen) return; // ya está abierto
 
         // Calcula la posición a la que debe acercarse
