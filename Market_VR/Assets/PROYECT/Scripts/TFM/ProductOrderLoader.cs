@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class ProductOrderLoader : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class ProductOrderLoader : MonoBehaviour
     public Transform pos3;
 
     private Dictionary<int, string[]> ordenPorSujeto = new Dictionary<int, string[]>();
+    private XRSimpleInteractable interactableB;
+
 
     void Start()
     {
@@ -116,16 +119,37 @@ public class ProductOrderLoader : MonoBehaviour
         PosicionProducto(orden[1], pos2);
         PosicionProducto(orden[2], pos3);
     }
-    void ActivarInteractable(string posicion)
+    void ActivarInteractable(string letra)
     {
 
         //obtener el componente SimpleInteractable y activarlo
+        GameObject producto = ObtenerProducto(letra); // obtener el GameObject del producto
+        XRSimpleInteractable interactable = producto.GetComponent<XRSimpleInteractable>(); // obtener el componente XRSimpleInteractable
 
+        if (interactable == null)
+        {
+            Debug.LogError("[ProductOrderLoader] El producto " + producto.name + " NO tiene XRSimpleInteractable.");
+            return;
+        }
+        interactable.enabled = true; // ACTIVARLO
+        Debug.Log("[ProductOrderLoader] Interactable ACTIVADO en " + producto.name);
     }
-    void DesactivarInteractable(string posicion)
+    void DesactivarInteractable(string letra)
     {
 
         //obtener el componente SimpleInteractable y adesactivarlo
+        GameObject producto = ObtenerProducto(letra);
+
+        XRSimpleInteractable interactable = producto.GetComponent<XRSimpleInteractable>();
+
+        if (interactable == null)
+        {
+            Debug.LogError("[ProductOrderLoader] El producto " + producto.name + " NO tiene XRSimpleInteractable.");
+            return;
+        }
+
+        interactable.enabled = false; // DESACTIVARLO
+        Debug.Log("[ProductOrderLoader] Interactable DESACTIVADO en " + producto.name);
 
     }
 
