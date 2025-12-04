@@ -67,7 +67,7 @@ public class ProductOrderLoader : MonoBehaviour
             string line = lines[i].Trim(); // limpiar espacios
             if (string.IsNullOrEmpty(line)) continue; // saltar líneas vacías
 
-            Debug.Log("[CSV] Línea original: '" + line + "'"); // debug línea original
+            //Debug.Log("[CSV] Línea original: '" + line + "'"); // debug línea original
 
             // Dividir por punto y coma
             string[] parts = line.Split(';'); //dividir por ;
@@ -98,7 +98,7 @@ public class ProductOrderLoader : MonoBehaviour
 
             ordenPorSujeto[id] = orden;
 
-            Debug.Log("[CSV] Guardado sujeto " + id + " => " + string.Join(",", orden));
+            //Debug.Log("[CSV] Guardado sujeto " + id + " => " + string.Join(",", orden));
         }
 
         Debug.Log("[ProductOrderLoader] CSV cargado correctamente.");
@@ -108,12 +108,27 @@ public class ProductOrderLoader : MonoBehaviour
 
     void ColocarProductos(string[] orden)
     {
+        //colocar los producrtos en las posiciones según el orden
         Debug.Log($"[ProductOrderLoader] Orden sujeto {sujeto}: {orden[0]}-{orden[1]}-{orden[2]}"); // debug del orden A B C
 
         PosicionProducto(orden[0], pos1);
+        ActivarInteractable(orden[0]); // activar interactable del primer producto
         PosicionProducto(orden[1], pos2);
         PosicionProducto(orden[2], pos3);
     }
+    void ActivarInteractable(string posicion)
+    {
+
+        //obtener el componente SimpleInteractable y activarlo
+
+    }
+    void DesactivarInteractable(string posicion)
+    {
+
+        //obtener el componente SimpleInteractable y adesactivarlo
+
+    }
+
 
     void PosicionProducto(string letra, Transform destino)
     {
