@@ -26,6 +26,7 @@ public class ProductOrderLoader : MonoBehaviour
     public GameObject textoYAudioFinal;
     public GameObject textoYAudioSubasta;
 
+    public GameObject ventanaCaja;
 
     private Dictionary<int, string[]> ordenPorSujeto = new Dictionary<int, string[]>();
    // private XRSimpleInteractable interactableB;
@@ -194,7 +195,7 @@ public class ProductOrderLoader : MonoBehaviour
         if (productoB) productoB.SetActive(false);
         if (productoC) productoC.SetActive(false);
     }
-    private void ActivarTextoYaudio()
+    private void CerrarBotonVentana()
     {
         // Índice 1 → activar Texto2 (producto central)
         if (indiceActualInteractable == 1)
@@ -210,11 +211,12 @@ public class ProductOrderLoader : MonoBehaviour
             textoYAudioFinal.SetActive(true);
 
         }
-        // Índice 3 → activar Texto4 (subasta)
+        // Índice 3 → activar Texto4 (subasta) + ventana caja
         else if (indiceActualInteractable == 3)
         {
             textoYAudioFinal.SetActive(false);
             textoYAudioSubasta.SetActive(true);
+            ventanaCaja.SetActive(true); // Abrir ventana caja cuando todos los productos han sido cerrados
         }
 
         if (textoYAudioActivo == null || textoYAudioCentral == null || textoYAudioFinal == null)
@@ -232,8 +234,8 @@ public class ProductOrderLoader : MonoBehaviour
         // Pasar al siguiente producto
         indiceActualInteractable++;
 
-        // ACTIVAR texto y audio según índice
-        ActivarTextoYaudio();
+        // ACTIVAR texto y audio según índice, y abrir ventana caja
+        CerrarBotonVentana();
 
         if (indiceActualInteractable < ordenActual.Length)
         {
