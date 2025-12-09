@@ -72,7 +72,7 @@ public class LabelTestToCSV : MonoBehaviour
             // Escribir filas
             EscribirLinea(writer, "Ventana", ventanaP1, ventanaP2);
             EscribirLinea(writer, "Etiqueta", etiquetaP1, etiquetaP2);
-            EscribirLinea(writer, "AreaAzul", AzulP1, AzulP1);
+            EscribirLinea(writer, "AreaAzul", AzulP1, AzulP2);
             EscribirLinea(writer, "AreaRoja", RojaP1, RojaP2);
             EscribirLinea(writer, "AreaVerde", VerdeP1, VerdeP2);
             EscribirLinea(writer, "AreaNaranja", NaranjaP1, NaranjaP2);

@@ -19,9 +19,18 @@ public class ProductOrderLoader : MonoBehaviour
     public Transform pos2;
     public Transform pos3;
 
-    private Dictionary<int, string[]> ordenPorSujeto = new Dictionary<int, string[]>();
-    private XRSimpleInteractable interactableB;
+    [Header("Audios enlazados al cerrar productos")]
 
+    public GameObject textoYAudioActivo;
+    public GameObject textoYAudioCentral;
+    public GameObject textoYAudioFinal;
+    public GameObject textoYAudioSubasta;
+
+
+    private Dictionary<int, string[]> ordenPorSujeto = new Dictionary<int, string[]>();
+   // private XRSimpleInteractable interactableB;
+    private int indiceActualInteractable = 0; // comienza en el primero del orden
+    private string[] ordenActual; // guardamos el orden cargado del CSV para este sujeto (variable global, fuera de funciones para acceder desde otros métodos)
 
     void Start()
     {
@@ -111,11 +120,12 @@ public class ProductOrderLoader : MonoBehaviour
 
     void ColocarProductos(string[] orden)
     {
+        ordenActual = orden; // guardamos el orden para usar después
         //colocar los producrtos en las posiciones según el orden
         Debug.Log($"[ProductOrderLoader] Orden sujeto {sujeto}: {orden[0]}-{orden[1]}-{orden[2]}"); // debug del orden A B C
 
         PosicionProducto(orden[0], pos1);
-        ActivarInteractable(orden[0]); // activar interactable del primer producto
+        ActivarInteractable(orden[0]); // activar interactable del primer producto nada mas aparecer
         PosicionProducto(orden[1], pos2);
         PosicionProducto(orden[2], pos3);
     }
@@ -184,4 +194,58 @@ public class ProductOrderLoader : MonoBehaviour
         if (productoB) productoB.SetActive(false);
         if (productoC) productoC.SetActive(false);
     }
+    private void ActivarTextoYaudio()
+    {
+        // Índice 1 → activar Texto2 (producto central)
+        if (indiceActualInteractable == 1)
+        {
+            textoYAudioActivo.SetActive(false);
+            textoYAudioCentral.SetActive(true);
+        }
+
+        // Índice 2 → activar Texto3 (producto final)
+        else if (indiceActualInteractable == 2)
+        {
+            textoYAudioCentral.SetActive(false);
+            textoYAudioFinal.SetActive(true);
+
+        }
+        // Índice 3 → activar Texto4 (subasta)
+        else if (indiceActualInteractable == 3)
+        {
+            textoYAudioFinal.SetActive(false);
+            textoYAudioSubasta.SetActive(true);
+        }
+
+        if (textoYAudioActivo == null || textoYAudioCentral == null || textoYAudioFinal == null)
+        {
+            Debug.LogWarning("[ProductOrderLoader] Alguno de los objetos de texto y audio no están asignados.");
+        }
+    }
+
+    // Función que se llama al cerrar la ventana de un producto
+    public void InteractableSiguienteProducto()
+    {
+        // Desactivar interactable del producto actual
+        DesactivarInteractable(ordenActual[indiceActualInteractable]); 
+
+        // Pasar al siguiente producto
+        indiceActualInteractable++;
+
+        // ACTIVAR texto y audio según índice
+        ActivarTextoYaudio();
+
+        if (indiceActualInteractable < ordenActual.Length)
+        {
+            // Activar interactable del siguiente producto
+            ActivarInteractable(ordenActual[indiceActualInteractable]);
+            // ACTIVAR texto y audio según índice
+            //ActivarTextoYaudio();
+        }
+        else
+        {
+            Debug.Log("[ProductOrderLoader] Todos los productos ya han sido pulsados.");
+        }
+    }
+
 }
