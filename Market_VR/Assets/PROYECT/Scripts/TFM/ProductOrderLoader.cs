@@ -2,6 +2,7 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.UI;
 
 public class ProductOrderLoader : MonoBehaviour
 {
@@ -26,7 +27,14 @@ public class ProductOrderLoader : MonoBehaviour
     public GameObject textoYAudioFinal;
     public GameObject textoYAudioSubasta;
 
+    [Header("Objetos de la ventana encuesta")]
     public GameObject ventanaCaja;
+    public Sprite spriteA; //arrastrar textura sabor
+    public Sprite spriteB; //arrastrar textura nutri
+    public Sprite spriteC; //arrastrar textura planet 
+    public GameObject etiquetaProducto1; //objeto donde poner textura sabor
+    public GameObject etiquetaProducto2; //objeto donde poner textura nutri
+    public GameObject etiquetaProducto3; //objeto donde poner textura planet
 
     private Dictionary<int, string[]> ordenPorSujeto = new Dictionary<int, string[]>();
    // private XRSimpleInteractable interactableB;
@@ -61,6 +69,8 @@ public class ProductOrderLoader : MonoBehaviour
         }
 
         ColocarProductos(orden); // ponemos los productos en las posiciones
+
+        AsignarEtiquetasEncuesta(); // asignar las texturas de las imagenes de la ventana encuesta
     }
 
     void CargarCSV()
@@ -248,6 +258,39 @@ public class ProductOrderLoader : MonoBehaviour
         {
             Debug.Log("[ProductOrderLoader] Todos los productos ya han sido pulsados.");
         }
+    }
+     public void AsignarEtiquetasEncuesta()
+    {
+        //asignamos la textura al gameobject correspondiente (Image->SourceImage) según el orden
+
+        //ordenActual contiene el orden de los productos para este sujeto
+        ordenActual = ordenPorSujeto[sujeto];
+
+        // Array con los GameObjects de las etiquetas
+        GameObject[] etiquetas = new GameObject[] { etiquetaProducto1, etiquetaProducto2, etiquetaProducto3 };
+
+        for (int i = 0; i < ordenActual.Length; i++)
+        {
+            GameObject etiquetaGO = etiquetas[i];
+            Image img = etiquetaGO.GetComponent<Image>();
+            if (img == null)
+            {
+                Debug.LogError("[ProductOrderLoader] No hay componente Image en " + etiquetaGO.name);
+                continue;
+            }
+            // Elegimos la textura según la letra A/B/C
+
+            switch (ordenActual[i].ToUpper())
+            {
+                case "A": img.sprite = spriteA; break;
+                case "B": img.sprite = spriteB; break;
+                case "C": img.sprite = spriteC; break;
+                default:
+                    Debug.LogWarning("Letra desconocida para asignar textura en orden: " + ordenActual[i]);
+                    break;
+            }
+        }
+
     }
 
 }

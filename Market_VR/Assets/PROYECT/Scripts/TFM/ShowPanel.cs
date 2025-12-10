@@ -18,6 +18,7 @@ public class ShowPanel : MonoBehaviour
     public float moveSpeed = 1f;             // Velocidad de acercamiento
     public float moveDistance = 0.7f;     // Lo que debe moverse hacia la cámara
 
+
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable;
 
     private Vector3 startPosition;
@@ -82,6 +83,7 @@ public class ShowPanel : MonoBehaviour
         isOpen = false;
 
     }
+
     // ---- CORUTINA DE MOVIMIENTO ----
     private System.Collections.IEnumerator MoveTo(Vector3 endPos)
     {
