@@ -64,11 +64,11 @@ public class NeonEventSender : MonoBehaviour
     }
 
     //Este método se ejecuta automáticamente al salir del modo Play o cerrar la app
-    private void OnApplicationQuit()
-    {
-        Debug.Log("Unity se está cerrando — enviando evento STOP automáticamente...");
+    //private void OnApplicationQuit()
+    //{
+        //Debug.Log("Unity se está cerrando — enviando evento STOP automáticamente...");
         //SendStopRecording();
-    }
+    //}
 
 
     [System.Serializable]
