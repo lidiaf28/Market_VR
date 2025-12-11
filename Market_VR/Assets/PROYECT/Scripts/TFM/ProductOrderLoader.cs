@@ -28,7 +28,7 @@ public class ProductOrderLoader : MonoBehaviour
     public GameObject textoYAudioSubasta;
 
     [Header("Objetos de la ventana encuesta")]
-    public GameObject ventanaCaja;
+    public GameObject ventanaSiNo;
     public Sprite spriteA; //arrastrar textura sabor
     public Sprite spriteB; //arrastrar textura nutri
     public Sprite spriteC; //arrastrar textura planet 
@@ -226,7 +226,7 @@ public class ProductOrderLoader : MonoBehaviour
         {
             textoYAudioFinal.SetActive(false);
             textoYAudioSubasta.SetActive(true);
-            ventanaCaja.SetActive(true); // Abrir ventana caja cuando todos los productos han sido cerrados
+            ventanaSiNo.SetActive(true); // Abrir ventana SiNo cuando todos los productos han sido cerrados
         }
 
         if (textoYAudioActivo == null || textoYAudioCentral == null || textoYAudioFinal == null)

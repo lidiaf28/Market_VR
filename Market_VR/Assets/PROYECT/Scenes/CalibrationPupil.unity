@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: f0f5243b9105aaf49bed68a2b4dd0043, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 333ebf342579d8d4cb40e01090779103, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -5730,6 +5730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: SUPERMARKET
+  SliderUpdateText: {fileID: 0}
 --- !u!4 &2037992973
 Transform:
   m_ObjectHideFlags: 0
