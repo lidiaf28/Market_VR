@@ -25,10 +25,11 @@ public class ProductOrderLoader : MonoBehaviour
     public GameObject textoYAudioActivo;
     public GameObject textoYAudioCentral;
     public GameObject textoYAudioFinal;
-    public GameObject textoYAudioSubasta;
+    public GameObject textoYAudioEleccion;
 
     [Header("Objetos de la ventana encuesta")]
     public GameObject ventanaSiNo;
+    public GameObject bocadillo;
     public Sprite spriteA; //arrastrar textura sabor
     public Sprite spriteB; //arrastrar textura nutri
     public Sprite spriteC; //arrastrar textura planet 
@@ -207,26 +208,29 @@ public class ProductOrderLoader : MonoBehaviour
     }
     private void CerrarBotonVentana()
     {
-        // Índice 1 → activar Texto2 (producto central)
+        // Índice 1 → activar Texto (producto central)
         if (indiceActualInteractable == 1)
         {
             textoYAudioActivo.SetActive(false);
             textoYAudioCentral.SetActive(true);
         }
 
-        // Índice 2 → activar Texto3 (producto final)
+        // Índice 2 → activar Texto (producto final)
         else if (indiceActualInteractable == 2)
         {
             textoYAudioCentral.SetActive(false);
             textoYAudioFinal.SetActive(true);
 
         }
-        // Índice 3 → activar Texto4 (subasta) + ventana caja
+        // Índice 3 → activar Texto (subasta) + ventana Eleccion Sí/No
         else if (indiceActualInteractable == 3)
         {
             textoYAudioFinal.SetActive(false);
-            textoYAudioSubasta.SetActive(true);
+            textoYAudioEleccion.SetActive(true);
             ventanaSiNo.SetActive(true); // Abrir ventana SiNo cuando todos los productos han sido cerrados
+            Canvas canvas = bocadillo.GetComponent<Canvas>();
+            canvas.enabled = false;  //desactivar el bocadillo del avatar, informacion en ventana
+
         }
 
         if (textoYAudioActivo == null || textoYAudioCentral == null || textoYAudioFinal == null)
@@ -244,7 +248,7 @@ public class ProductOrderLoader : MonoBehaviour
         // Pasar al siguiente producto
         indiceActualInteractable++;
 
-        // ACTIVAR texto y audio según índice, y abrir ventana caja
+        // ACTIVAR texto y audio según índice, y abrir ventana 
         CerrarBotonVentana();
 
         if (indiceActualInteractable < ordenActual.Length)

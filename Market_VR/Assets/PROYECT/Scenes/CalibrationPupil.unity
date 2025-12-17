@@ -5792,7 +5792,7 @@ MonoBehaviour:
   cross3: {fileID: 1781510758}
   cross4: {fileID: 795570044}
   cross5: {fileID: 617359790}
-  changeInterval: 10
+  changeInterval: 12
 --- !u!114 &2037992977
 MonoBehaviour:
   m_ObjectHideFlags: 0
