@@ -7649,7 +7649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1503989109714432937, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2077641819426116279, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
       propertyPath: m_text
@@ -16783,13 +16783,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180.543
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 842a465ffbbf4cc4aaa6395a4eebc836, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b04b55fbfcbf674589a7a9dba6211ad, type: 2}
     - target: {fileID: 919132149155446097, guid: 842a465ffbbf4cc4aaa6395a4eebc836, type: 3}
       propertyPath: m_Name
       value: Albondiga_planet
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 842a465ffbbf4cc4aaa6395a4eebc836, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23657,7 +23661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 842a465ffbbf4cc4aaa6395a4eebc836, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43438,13 +43442,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 179.731
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 842a465ffbbf4cc4aaa6395a4eebc836, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c21a9cfc20ddf4049946ce2c3ad965bf, type: 2}
     - target: {fileID: 919132149155446097, guid: 842a465ffbbf4cc4aaa6395a4eebc836, type: 3}
       propertyPath: m_Name
       value: Albondiga_nutri
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 842a465ffbbf4cc4aaa6395a4eebc836, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
