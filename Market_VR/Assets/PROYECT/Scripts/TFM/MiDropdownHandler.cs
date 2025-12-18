@@ -26,6 +26,8 @@ public class MiDropdownHandler : MonoBehaviour
         [HideInInspector] public bool terminado = false;
         [HideInInspector] public bool elegidoSi = false;
     }
+
+
     void Start()
     {
         dropdownCompraSiNo.onValueChanged.AddListener(CambiarOpcionSNo);
@@ -51,6 +53,16 @@ public class MiDropdownHandler : MonoBehaviour
         botonNo.gameObject.SetActive(false);
     }
 
+    public void SliderValueToText(float value, TMP_Text texto)  // Llamar desde On Value Changed (float)
+    {
+        if (texto == null)
+        {
+            Debug.LogWarning("[SliderValueToText] El texto no está asignado.");
+            return;
+        }
+
+        texto.text = value.ToString("0.00");
+    }
     void CambiarOpcionSNo(int index)
     {
         switch (index)

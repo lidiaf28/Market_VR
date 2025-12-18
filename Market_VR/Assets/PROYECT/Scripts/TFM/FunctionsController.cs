@@ -9,8 +9,6 @@ public class FunctionsController : MonoBehaviour
     // Nombre de la escena a cargar (puedes configurarlo desde el inspector)
     public string sceneName;
 
-    public TMP_Text SliderUpdateText;
-
     // Esta función puedes enlazarla al botón desde el inspector
     public void LoadScene()
     {
@@ -22,12 +20,6 @@ public class FunctionsController : MonoBehaviour
         {
             Debug.LogWarning("No se ha asignado un nombre de escena en el script ChangeScene.");
         }
-    }
-
-    public void SliderValueToText(float value)    // Llamar desde On Value Changed (float)
-    {
-        // Mostrar el float con 2 decimales
-        SliderUpdateText.text = value.ToString("0.00");
     }
 
 }

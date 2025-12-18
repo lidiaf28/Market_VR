@@ -18,13 +18,18 @@ public class LabelAreasToCSV : MonoBehaviour
     [Header("Punto Central Ventana")]
     public Transform ventanaCentro;
 
-    [Header("Puntos Etiqueta")]
-    public Transform etiquetaP1;
-    public Transform etiquetaP2;
+    [Header("Puntos Titulo")]
+    public Transform tituloP1;
+    public Transform tituloP2;
 
-    [Header("Puntos Logo")]
-    public Transform logoP1;
-    public Transform logoP2;
+    [Header("Puntos Imagen")]
+    public Transform imagenP1;
+    public Transform imagenP2;
+
+    [Header("Puntos Ingredientes")]
+    public Transform ingredientesP1;
+    public Transform ingredientesP2;
+
 
     [Header("Puntos Info Nutricional")]
     public Transform infoNutriP1;
@@ -33,6 +38,11 @@ public class LabelAreasToCSV : MonoBehaviour
     [Header("Puntos PlanetScore")]
     public Transform planetScoreP1;
     public Transform planetScoreP2;
+
+
+    [Header("Puntos Eslogan")]
+    public Transform esloganP1;
+    public Transform esloganP2;
 
     private string fileName = "AreasLabels.csv";
 
@@ -50,11 +60,13 @@ public class LabelAreasToCSV : MonoBehaviour
 
             // Escribir filas
             EscribirLinea(writer, "Ventana", ventanaP1, ventanaP2);
-            EscribirLinea(writer, "Etiqueta", etiquetaP1, etiquetaP2);
-            EscribirLinea(writer, "Logo", logoP1, logoP2);
+            EscribirLinea(writer, "Titulo", tituloP1, tituloP2);
+            EscribirLinea(writer, "Imagen", imagenP1, imagenP2);
+            EscribirLinea(writer, "Ingredientes", ingredientesP1, ingredientesP2);
             EscribirLinea(writer, "InfoNutricional", infoNutriP1, infoNutriP2);
             EscribirLinea(writer, "PlanetScore", planetScoreP1, planetScoreP2);
-            EscribirLineaPunto(writer, "VentanaCentro", ventanaCentro);
+            EscribirLinea(writer, "Eslogan", esloganP1, esloganP2);
+            EscribirLineaPunto(writer, "Punto Central", ventanaCentro);
         }
 
         Debug.Log("CSV generado en: " + filePath);
