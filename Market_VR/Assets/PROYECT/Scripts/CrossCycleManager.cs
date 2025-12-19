@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static ReadyPlayerMe.Core.Analytics.Constants;
 using static Unity.Burst.Intrinsics.Arm;
 
@@ -15,6 +16,8 @@ public class CrossCycleManager : MonoBehaviour
 
     [Header("Tiempo entre cruces (segundos)")]
     public float changeInterval = 5f;
+
+    public GameObject siguiente;
 
     private GameObject[] crosses;
     private int currentIndex = 0;
@@ -71,7 +74,6 @@ public class CrossCycleManager : MonoBehaviour
         yield return new WaitForSeconds(changeInterval);
 
         neon.SendNewEvent("X_STOP"); //Envía evento STOP al Neon
-
         // Fin del ciclo
         StopCycle();
     }
@@ -81,5 +83,8 @@ public class CrossCycleManager : MonoBehaviour
         isCycling = false;
         StopAllCoroutines();
         Debug.Log(" Ciclo de cruces finalizado.");
+        //desactivar ultima cruz y activar boton
+        cross5.SetActive(false);
+        siguiente.SetActive(true);
     }
 }

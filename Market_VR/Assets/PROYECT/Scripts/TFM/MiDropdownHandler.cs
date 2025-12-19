@@ -6,11 +6,13 @@ public class MiDropdownHandler : MonoBehaviour
 {
     [Header("DesplegableSiNo")]
     public TMP_Dropdown dropdownCompraSiNo;
+    public TMP_Dropdown dropdownConfirmarCompra;
 
     [Header("Botones")]
     public Button botonSi;   // Botón que se activa si eliges "Sí"
     public Button botonNo;   // Botón que se activa si eliges "No"
     public Button botonComprar;   // <-- EL BOTÓN FINAL
+
 
     [Header("Productos")]
     public ProductoUI[] productos;   // Lista de productos con su dropdown, botón y slider
@@ -45,23 +47,18 @@ public class MiDropdownHandler : MonoBehaviour
             // Escuchar el botón de “añadir a la cesta”
             p.boton.onClick.AddListener(() => ConfirmarCompra(p)); //no hace falta que lo ponga en OnClick, se escucha aqui
         }
-
+        //BOTON COMPRAR
         botonComprar.interactable = false; // Desactivado al inicio
+        botonComprar.gameObject.SetActive(false); //desactivado para que no se vea
+        //DROPDOWN CONFIRMACION
+        dropdownConfirmarCompra.onValueChanged.AddListener(ConfirmarCompraFinal);
+        dropdownConfirmarCompra.gameObject.SetActive(false);
+
+        dropdownCompraSiNo.gameObject.SetActive(false);
 
         // Al inicio desactivamos ambos
         botonSi.gameObject.SetActive(false);
         botonNo.gameObject.SetActive(false);
-    }
-
-    public void SliderValueToText(float value, TMP_Text texto)  // Llamar desde On Value Changed (float)
-    {
-        if (texto == null)
-        {
-            Debug.LogWarning("[SliderValueToText] El texto no está asignado.");
-            return;
-        }
-
-        texto.text = value.ToString("0.00");
     }
     void CambiarOpcionSNo(int index)
     {
@@ -96,7 +93,7 @@ public class MiDropdownHandler : MonoBehaviour
         switch (index)
         {
             case 0:
-                // Opción de control  no hacer nada
+                // Opción de control no hacer nada
                 producto.boton.interactable = false;
                 producto.slider.interactable = false;
                 producto.terminado = false;
@@ -123,6 +120,28 @@ public class MiDropdownHandler : MonoBehaviour
                 break;
         }
     }
+
+    void ConfirmarCompraFinal(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                // opción por defecto, no hacer nada
+                botonComprar.interactable = false;
+                break;
+
+            case 1:
+                // SÍ confirmar compra
+                botonComprar.interactable = true;
+                break;
+
+            case 2:
+                // NO confirmar → reiniciar ventana
+                ReiniciarVentana();
+                break;
+        }
+    }
+
     // ------------------------------------------------------------
     // Cuando pulsa “Añadir a la cesta”
     // ------------------------------------------------------------
@@ -133,6 +152,28 @@ public class MiDropdownHandler : MonoBehaviour
             producto.terminado = true; //le decimos que ya esta confirmado el pedido
             RevisarEstadoGeneral();
         }
+    }
+
+    void ReiniciarVentana()
+    {
+        // Ocultar confirmación
+        dropdownConfirmarCompra.gameObject.SetActive(false);
+        dropdownConfirmarCompra.SetValueWithoutNotify(0);
+
+        // Desactivar botón comprar
+        botonComprar.interactable = false;
+        botonComprar.gameObject.SetActive(false);
+
+        // Resetear productos
+        foreach (var p in productos)
+        {
+            p.dropdown.SetValueWithoutNotify(0);
+            p.boton.interactable = false;
+            p.slider.interactable = false;
+            p.terminado = false;
+            p.elegidoSi = false;
+        }
+
     }
 
     // ------------------------------------------------------------
@@ -152,7 +193,8 @@ public class MiDropdownHandler : MonoBehaviour
 
         if (completados == 3)
         {
-            botonComprar.interactable = true;
+            dropdownConfirmarCompra.SetValueWithoutNotify(0); // reset a "Selecciona" para las siguientes veces q se abra
+            dropdownConfirmarCompra.gameObject.SetActive(true);
         }
     }
 }
