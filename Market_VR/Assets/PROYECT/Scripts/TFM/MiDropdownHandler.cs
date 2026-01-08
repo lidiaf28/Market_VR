@@ -49,7 +49,8 @@ public class MiDropdownHandler : MonoBehaviour
         }
         //BOTON COMPRAR
         botonComprar.interactable = false; // Desactivado al inicio
-        botonComprar.gameObject.SetActive(false); //desactivado para que no se vea
+        //botonComprar.gameObject.SetActive(false); //desactivado para que no se vea
+
         //DROPDOWN CONFIRMACION
         dropdownConfirmarCompra.onValueChanged.AddListener(ConfirmarCompraFinal);
         dropdownConfirmarCompra.gameObject.SetActive(false);
@@ -131,7 +132,7 @@ public class MiDropdownHandler : MonoBehaviour
                 break;
 
             case 1:
-                // SÍ confirmar compra
+                // SÍ confirmar compra → activar botón comprar
                 botonComprar.interactable = true;
                 break;
 

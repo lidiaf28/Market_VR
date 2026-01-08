@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static ReadyPlayerMe.Core.Analytics.Constants;
@@ -18,6 +19,7 @@ public class CrossCycleManager : MonoBehaviour
     public float changeInterval = 5f;
 
     public GameObject siguiente;
+    public GameObject textoFinish;
 
     private GameObject[] crosses;
     private int currentIndex = 0;
@@ -86,5 +88,6 @@ public class CrossCycleManager : MonoBehaviour
         //desactivar ultima cruz y activar boton
         cross5.SetActive(false);
         siguiente.SetActive(true);
+        textoFinish.SetActive(true);
     }
 }
