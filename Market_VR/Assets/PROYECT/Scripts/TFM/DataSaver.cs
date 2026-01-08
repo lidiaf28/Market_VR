@@ -23,6 +23,8 @@ public class DataSaver : MonoBehaviour
 
     public void SaveData()
     {
+        Debug.Log("[DataSaver] Guardando datos de usuario...");
+
         // 1️ Obtener ID de usuario
         int userID = productOrderLoader.sujeto;
 
