@@ -16,8 +16,8 @@ public class AudioControl : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("textosGO length = " + textosGO.Length);
-        Debug.Log("audiosGO length = " + audiosGO.Length);
+        //Debug.Log("textosGO length = " + textosGO.Length);
+        //Debug.Log("audiosGO length = " + audiosGO.Length);
 
         if (textosGO.Length != audiosGO.Length)
         {

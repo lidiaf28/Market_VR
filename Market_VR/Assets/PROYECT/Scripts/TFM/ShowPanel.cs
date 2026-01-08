@@ -59,7 +59,7 @@ public class ShowPanel : MonoBehaviour
 
     void OnSelect(SelectEnterEventArgs args)
     {
-        neon.SendNewEvent(eventName + "_Open");
+        neon.SendNewEvent(eventName + "_OPEN");
         if (isOpen) return; // ya está abierto
 
         // Calcula la posición a la que debe acercarse

@@ -57,9 +57,9 @@ public class NeonEventSender : MonoBehaviour
             string responseText = request.downloadHandler?.text ?? "";
 
             if (request.result == UnityWebRequest.Result.Success)
-                Debug.Log($"Evento {action} enviado correctamente: {responseText}");
+                Debug.Log($"[NeonEventSender] Evento {action} enviado correctamente: {responseText}");
             else
-                Debug.LogError($"Error enviando evento {action}: {request.error}\nRespuesta: {responseText}");
+                Debug.LogError($"[NeonEventSender] Error enviando evento {action}: {request.error}\nRespuesta: {responseText}");
         }
     }
 

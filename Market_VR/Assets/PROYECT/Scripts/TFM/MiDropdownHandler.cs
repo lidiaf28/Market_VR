@@ -55,7 +55,7 @@ public class MiDropdownHandler : MonoBehaviour
         dropdownConfirmarCompra.onValueChanged.AddListener(ConfirmarCompraFinal);
         dropdownConfirmarCompra.gameObject.SetActive(false);
 
-        dropdownCompraSiNo.gameObject.SetActive(false);
+        //dropdownCompraSiNo.gameObject.SetActive(false);
 
         // Al inicio desactivamos ambos
         botonSi.gameObject.SetActive(false);
