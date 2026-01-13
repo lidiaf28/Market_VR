@@ -12019,7 +12019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 64a16134eca03814ea924848773ed75f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d398f7625619d5348ae108ec3b33cbf0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18366,7 +18366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 842a465ffbbf4cc4aaa6395a4eebc836, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20935,7 +20935,6 @@ GameObject:
   - component: {fileID: 899974963}
   - component: {fileID: 899974965}
   - component: {fileID: 899974966}
-  - component: {fileID: 899974967}
   - component: {fileID: 899974969}
   - component: {fileID: 899974970}
   m_Layer: 0
@@ -21028,24 +21027,12 @@ MonoBehaviour:
   textoYAudioEleccion: {fileID: 876388936}
   ventanaSiNo: {fileID: 1406412699}
   bocadillo: {fileID: 2039639621}
-  spriteA: {fileID: 21300000, guid: 64a16134eca03814ea924848773ed75f, type: 3}
-  spriteB: {fileID: 21300000, guid: 95cff51143c7bae40a2919e96bbd2358, type: 3}
-  spriteC: {fileID: 21300000, guid: f1fd6b3d334d0ca4cbb2e602c75041cb, type: 3}
+  spriteA: {fileID: 21300000, guid: d398f7625619d5348ae108ec3b33cbf0, type: 3}
+  spriteB: {fileID: 21300000, guid: b0691e21b91597f49a284c2b9826030b, type: 3}
+  spriteC: {fileID: 21300000, guid: 50688e8f51988db419b02bb5029eaa0b, type: 3}
   etiquetaProducto1: {fileID: 996403689}
   etiquetaProducto2: {fileID: 1496093575}
   etiquetaProducto3: {fileID: 1826429505}
---- !u!114 &899974967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899974962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09d2c45e3ce19044da037a7d5fea4700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &899974969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27835,7 +27822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f1fd6b3d334d0ca4cbb2e602c75041cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50688e8f51988db419b02bb5029eaa0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -38360,7 +38347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 95cff51143c7bae40a2919e96bbd2358, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0691e21b91597f49a284c2b9826030b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
