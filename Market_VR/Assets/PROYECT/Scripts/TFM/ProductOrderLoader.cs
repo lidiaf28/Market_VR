@@ -37,11 +37,15 @@ public class ProductOrderLoader : MonoBehaviour
     public GameObject etiquetaProducto2; //objeto donde poner textura nutri
     public GameObject etiquetaProducto3; //objeto donde poner textura planet
 
+    [Header("Audio explicación cierre")]
+    public GameObject audioExplicacionCerrar;
+
+
     private Dictionary<int, string[]> ordenPorSujeto = new Dictionary<int, string[]>();
    // private XRSimpleInteractable interactableB;
     private int indiceActualInteractable = 0; // comienza en el primero del orden
     private string[] ordenActual; // guardamos el orden cargado del CSV para este sujeto (variable global, fuera de funciones para acceder desde otros métodos)
-
+    private bool audioExplicacionReproducido = false;
     void Start()
     {
         DesactivarProductos();
@@ -128,8 +132,6 @@ public class ProductOrderLoader : MonoBehaviour
         Debug.Log("[ProductOrderLoader] CSV cargado correctamente.");
     }
 
-
-
     void ColocarProductos(string[] orden)
     {
         ordenActual = orden; // guardamos el orden para usar después
@@ -155,6 +157,23 @@ public class ProductOrderLoader : MonoBehaviour
         }
         interactable.enabled = true; // ACTIVARLO
         Debug.Log("[ProductOrderLoader] Interactable ACTIVADO en " + producto.name);
+
+        // Solo para el primer producto, reproducir audio al tocarlo
+        if (indiceActualInteractable == 0 && !audioExplicacionReproducido)
+        {
+            interactable.selectEntered.AddListener(_ =>
+            {   //suscribirse al evento de selección
+                if (audioExplicacionCerrar != null)
+                {
+                    audioExplicacionCerrar.gameObject.SetActive(true);
+                    audioExplicacionReproducido = true;
+                }
+                else
+                {
+                    Debug.LogWarning("[ProductOrderLoader] Audio explicación no asignado.");
+                }
+            });
+        }
     }
     void DesactivarInteractable(string letra)
     {
