@@ -70,7 +70,8 @@ public class DataSaver : MonoBehaviour
         );
 
         // 6 Guardar datos en carpeta "Data"
-        string folderPath = Path.Combine(Application.persistentDataPath, "Data");
+        //string folderPath = Path.Combine(Application.persistentDataPath, "Data"); esto lo guarda en local en el pc, no en el proyecto, por eso no se ve y da error
+        string folderPath = Path.Combine(Application.dataPath, "Data"); //editor / proyecto
         if (!Directory.Exists(folderPath))
         {
             Directory.CreateDirectory(folderPath);
