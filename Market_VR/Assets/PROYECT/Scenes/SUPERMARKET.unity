@@ -1646,6 +1646,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   textoAsociado: {fileID: 200857077}
+  VideoCocinero: {fileID: 0}
+  ActivarTrasVideo: {fileID: 0}
 --- !u!1 &65685096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,7 +2857,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99788097}
   m_LocalRotation: {x: -0, y: 0.00000008940697, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.1}
   m_LocalScale: {x: 1.9606515, y: 0.999186, z: 0.99883425}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2888,6 +2890,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   textoAsociado: {fileID: 0}
+  VideoCocinero: {fileID: 0}
+  ActivarTrasVideo: {fileID: 0}
 --- !u!114 &99788100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20166,7 +20170,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870360776}
   m_LocalRotation: {x: -0, y: 0.00000008847565, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.10015035}
+  m_LocalPosition: {x: 0, y: 0, z: -1.1}
   m_LocalScale: {x: 1.2235719, y: 1.2869515, z: 1.2901608}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25224,81 +25228,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074438405}
-  m_CullTransparentMesh: 1
---- !u!1 &1081866746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1081866747}
-  - component: {fileID: 1081866749}
-  - component: {fileID: 1081866748}
-  m_Layer: 5
-  m_Name: Etiqueta
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1081866747
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081866746}
-  m_LocalRotation: {x: -0.00000008940697, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -1.101386}
-  m_LocalScale: {x: -0.017408054, y: -0.017181566, z: -0.017428312}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2077376105}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 0.0018765926}
-  m_SizeDelta: {x: 41.6236, y: 51.2626}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1081866748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081866746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 09eeb5abe9c5de340843800b4d347931, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1081866749
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081866746}
   m_CullTransparentMesh: 1
 --- !u!1 &1084265887
 GameObject:
@@ -34059,6 +33988,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   textoAsociado: {fileID: 1972692405}
+  VideoCocinero: {fileID: 0}
+  ActivarTrasVideo: {fileID: 0}
 --- !u!1 &1436072501
 GameObject:
   m_ObjectHideFlags: 0
@@ -35858,13 +35789,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Como he visto que estos productos te han parecido interesantes, te recuerdo
     que al final del estudio se realizar\xE1 un sorteo real entre las personas participantes.
-    Se sortear\xE1n un lote de productos alimentarios con un valor comercial aproximado
-    de hasta 10 \u20AC. \n\nPara las personas seleccionadas en el sorteo, uno de
-    los productos que vas a evaluar se elegir\xE1 al azar y se comparar\xE1 el precio
-    m\xE1ximo que indiques con un precio generado por el sistema. En funci\xF3n de
-    esa comparaci\xF3n, podr\xE1s obtener el regalo. Por este motivo, es importante
-    que indiques el precio m\xE1ximo real que estar\xEDas dispuesto/a a pagar. Esto
-    es que si el precio fuera 0,10 \u20AC mayor ya no la comprar\xEDas. "
+    Se sortear\xE1 un lote de productos alimentarios con un valor comercial aproximado
+    de hasta 10\u20AC. \nLa persona ganadora ser\xE1 contactada utilizando los datos
+    de contacto facilitados voluntariamente al finalizar el estudio, exclusivamente
+    para la gesti\xF3n y entrega del lote de productos, siendo borrados al terminar
+    el sorteo.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -45658,7 +45587,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4d120760a4fb63d4b99f346d0868999e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1e9f0713be17d4243a8ba12327db9a64, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -47354,6 +47283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   textoAsociado: {fileID: 532870524}
+  VideoCocinero: {fileID: 0}
+  ActivarTrasVideo: {fileID: 0}
 --- !u!1 &1990630845
 GameObject:
   m_ObjectHideFlags: 0
@@ -49137,8 +49068,7 @@ Transform:
   m_LocalPosition: {x: 0.000044442124, y: -15.000045, z: -0.99986815}
   m_LocalScale: {x: 751.99725, y: 532.82196, z: 0.99883413}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1081866747}
+  m_Children: []
   m_Father: {fileID: 794679217}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2077376106

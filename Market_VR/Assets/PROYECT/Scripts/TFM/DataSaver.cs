@@ -62,16 +62,16 @@ public class DataSaver : MonoBehaviour
         StringBuilder sb = new StringBuilder();
 
         sb.AppendLine(
-            "OpcionComprar,ComprarP1,PrecioP1,ComprarP2,PrecioP2,ComprarP3,PrecioP3,SliderSeguro" //encabezados de las columnas
+            "OpcionComprar;ComprarP1;PrecioP1;ComprarP2;PrecioP2;ComprarP3;PrecioP3;SliderSeguro" //encabezados de las columnas
         );
 
         sb.AppendLine(
-            $"{comprarGeneral},{p1},{precio1},{p2},{precio2},{p3},{precio3},{seguro}" //guardamos cada valor separado por comas en la fila correspondiente
+            $"{comprarGeneral};{p1};{precio1};{p2};{precio2};{p3};{precio3};{seguro}" //guardamos cada valor separado por comas en la fila correspondiente
         );
 
         // 6 Guardar datos en carpeta "Data"
         //string folderPath = Path.Combine(Application.persistentDataPath, "Data"); esto lo guarda en local en el pc, no en el proyecto, por eso no se ve y da error
-        string folderPath = Path.Combine(Application.dataPath, "Data"); //editor / proyecto
+        string folderPath = Path.Combine(Application.dataPath,"PROYECT","Data"); //editor / proyecto
         if (!Directory.Exists(folderPath))
         {
             Directory.CreateDirectory(folderPath);
