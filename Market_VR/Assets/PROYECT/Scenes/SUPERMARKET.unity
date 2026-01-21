@@ -21017,7 +21017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d1f65fb1ece8d4683d998c6226ee33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sujeto: 3
+  sujeto: 1
   csvFileName: orden_productos.csv
   productoA: {fileID: 1112868111}
   productoB: {fileID: 1969460580}
@@ -21059,16 +21059,19 @@ MonoBehaviour:
   - dropdown: {fileID: 22076925}
     boton: {fileID: 916590598}
     slider: {fileID: 1435201408}
+    contadorTexto: {fileID: 1972692403}
     terminado: 0
     elegidoSi: 0
   - dropdown: {fileID: 1396834971}
     boton: {fileID: 1147788534}
     slider: {fileID: 1980914331}
+    contadorTexto: {fileID: 532870522}
     terminado: 0
     elegidoSi: 0
   - dropdown: {fileID: 1965773142}
     boton: {fileID: 125127153}
     slider: {fileID: 64524740}
+    contadorTexto: {fileID: 200857075}
     terminado: 0
     elegidoSi: 0
 --- !u!114 &899974970
@@ -39421,6 +39424,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1864002280}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1646286250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43360,7 +43375,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833192025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45911,7 +45926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2077641819426116279, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
       propertyPath: m_text
-      value: 'CAJA '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2077641819426116279, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
       propertyPath: m_margin.w
@@ -49814,6 +49829,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1864002280}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

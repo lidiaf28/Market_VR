@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class MiDropdownHandler : MonoBehaviour
 {
@@ -13,7 +14,6 @@ public class MiDropdownHandler : MonoBehaviour
     public Button botonNo;   // Botón que se activa si eliges "No"
     public Button botonComprar;   // <-- EL BOTÓN FINAL
 
-
     [Header("Productos")]
     public ProductoUI[] productos;   // Lista de productos con su dropdown, botón y slider
 
@@ -24,6 +24,7 @@ public class MiDropdownHandler : MonoBehaviour
         public TMP_Dropdown dropdown;
         public Button boton;
         public Slider slider;
+        public GameObject contadorTexto;
 
         [HideInInspector] public bool terminado = false;
         [HideInInspector] public bool elegidoSi = false;
@@ -163,13 +164,16 @@ public class MiDropdownHandler : MonoBehaviour
 
         // Desactivar botón comprar
         botonComprar.interactable = false;
-        botonComprar.gameObject.SetActive(false);
 
         // Resetear productos
         foreach (var p in productos)
         {
             p.dropdown.SetValueWithoutNotify(0);
+            //reiniciar tambien el boton a 0
+           
             p.boton.interactable = false;
+            p.slider.SetValueWithoutNotify(0); //reiniciar tambien el slider a posicion original y asi el contador del slider vuelve a 0
+            p.contadorTexto.GetComponent<TextMeshProUGUI>().text = "0";
             p.slider.interactable = false;
             p.terminado = false;
             p.elegidoSi = false;
