@@ -6183,7 +6183,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xA1Hola! Antes de comenzar la prueba, vamos a utilizar este espacio para
     explicarte  de qu\xE9 va el experimento.\n\nPero primero, vamos a indicarte c\xF3mo
-    utilizar los mandos. Para interactuar con los objetos y botones , hay que pulsar
+    utilizar los mandos. Para interactuar con los objetos y botones, hay que pulsar
     el bot\xF3n que se indica a continuaci\xF3n:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
