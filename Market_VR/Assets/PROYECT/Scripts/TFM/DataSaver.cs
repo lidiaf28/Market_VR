@@ -1,8 +1,9 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class DataSaver : MonoBehaviour
 {
@@ -76,8 +77,11 @@ public class DataSaver : MonoBehaviour
         {
             Directory.CreateDirectory(folderPath);
         }
+        // Generamos el timestamp con un formato apto para nombres de archivo
+        string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
 
-        string fileName = $"Data_U{userID}.csv";
+        // Combinamos el ID de usuario y el timestamp
+        string fileName = $"{timestamp}_Data_U{userID}.csv";
         string filePath = Path.Combine(folderPath, fileName);
 
         File.WriteAllText(filePath, sb.ToString());
