@@ -4709,8 +4709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.899994, y: -177.4}
-  m_SizeDelta: {x: 212.2, y: 230.74}
+  m_AnchoredPosition: {x: 9.2485, y: -177.4}
+  m_SizeDelta: {x: 229.46, y: 230.74}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1308363232
 MonoBehaviour:
@@ -7018,7 +7018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: SUPERMARKET
   textoAsociado: {fileID: 0}
-  VideoCocinero: {fileID: 1325370068}
+  VideoReproducido: {fileID: 1325370068}
   ActivarTrasVideo: {fileID: 657551706}
 --- !u!4 &2037992973
 Transform:

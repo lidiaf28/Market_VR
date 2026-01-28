@@ -11,7 +11,7 @@ public class FunctionsController : MonoBehaviour
     public string sceneName;
     public TMP_Text textoAsociado;
     [Header("Video terminado")]
-    public VideoPlayer VideoCocinero;
+    public VideoPlayer VideoReproducido;
     public Button ActivarTrasVideo;
 
     // Esta función puedes enlazarla al botón desde el inspector
@@ -21,7 +21,7 @@ public class FunctionsController : MonoBehaviour
         ActivarTrasVideo.interactable = false;
 
         // Nos suscribimos al evento de fin de vídeo
-        VideoCocinero.loopPointReached += OnVideoFinished;
+        VideoReproducido.loopPointReached += OnVideoFinished;
     }
 
 

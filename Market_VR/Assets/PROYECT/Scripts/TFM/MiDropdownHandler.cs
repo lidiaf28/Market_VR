@@ -139,7 +139,9 @@ public class MiDropdownHandler : MonoBehaviour
 
             case 2:
                 // NO confirmar → reiniciar ventana
-                ReiniciarVentana();
+                //ReiniciarVentana();
+                //No hacer nada, boton bloqueado para que no sigan hasta que le den a Si
+                botonComprar.interactable = false;
                 break;
         }
     }

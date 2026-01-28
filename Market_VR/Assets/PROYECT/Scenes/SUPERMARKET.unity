@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   textoAsociado: {fileID: 200857077}
-  VideoCocinero: {fileID: 0}
+  VideoReproducido: {fileID: 0}
   ActivarTrasVideo: {fileID: 0}
 --- !u!1 &65685096
 GameObject:
@@ -2133,6 +2133,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5709447589202147114, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1517362902}
+    - targetCorrespondingSourceObject: {fileID: 5709447589202147114, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1165601510}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
 --- !u!224 &72831521 stripped
@@ -2890,7 +2893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   textoAsociado: {fileID: 0}
-  VideoCocinero: {fileID: 0}
+  VideoReproducido: {fileID: 0}
   ActivarTrasVideo: {fileID: 0}
 --- !u!114 &99788100
 MonoBehaviour:
@@ -20941,6 +20944,7 @@ GameObject:
   - component: {fileID: 899974966}
   - component: {fileID: 899974969}
   - component: {fileID: 899974970}
+  - component: {fileID: 899974971}
   m_Layer: 0
   m_Name: SCRIPTS
   m_TagString: Untagged
@@ -21017,7 +21021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d1f65fb1ece8d4683d998c6226ee33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sujeto: 1
+  sujeto: 2
   csvFileName: orden_productos.csv
   productoA: {fileID: 1112868111}
   productoB: {fileID: 1969460580}
@@ -21095,6 +21099,22 @@ MonoBehaviour:
   precioP3: {fileID: 64524740}
   sliderSeguro: {fileID: 99788100}
   productOrderLoader: {fileID: 899974966}
+--- !u!114 &899974971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899974962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f07101051843a4d834c6da381d1af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
+  textoAsociado: {fileID: 0}
+  VideoReproducido: {fileID: 2058956146}
+  ActivarTrasVideo: {fileID: 993711650}
 --- !u!1 &907791568
 GameObject:
   m_ObjectHideFlags: 0
@@ -23702,7 +23722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21, y: -205.6}
+  m_AnchoredPosition: {x: -3.8, y: -229.5}
   m_SizeDelta: {x: 146.34, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993711650
@@ -23744,7 +23764,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 993711651}
   m_OnClick:
     m_PersistentCalls:
@@ -23774,18 +23794,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 990938471}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1159168453}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -27079,7 +27087,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3a4d6f0c342741640a820dc82cb1cbef, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a0011a7a579fc974197905a6c15097df, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -27275,6 +27283,79 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165573375}
+  m_CullTransparentMesh: 1
+--- !u!1 &1165601509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165601510}
+  - component: {fileID: 1165601512}
+  - component: {fileID: 1165601511}
+  m_Layer: 5
+  m_Name: Video
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1165601510
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165601509}
+  m_LocalRotation: {x: -0, y: 0.00000008847565, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.1}
+  m_LocalScale: {x: 3.5042434, y: 3.501148, z: 3.5042434}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2058956145}
+  m_Father: {fileID: 72831522}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -4.47, y: 22.6}
+  m_SizeDelta: {x: 172.39, y: 107.71}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1165601511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165601509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: 020cb31167ca82242beccb2db992d7da, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1165601512
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165601509}
   m_CullTransparentMesh: 1
 --- !u!1 &1167741852
 GameObject:
@@ -33988,7 +34069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   textoAsociado: {fileID: 1972692405}
-  VideoCocinero: {fileID: 0}
+  VideoReproducido: {fileID: 0}
   ActivarTrasVideo: {fileID: 0}
 --- !u!1 &1436072501
 GameObject:
@@ -35747,7 +35828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1517362902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35794,8 +35875,8 @@ MonoBehaviour:
     \u201CS\xED\u201D o \u201CNo\u201D. En caso de seleccionar \u201CS\xED\u201D,debes
     indicar el precio m\xE1ximo que pagarias por \xE9l. Esto significa que si costara
     0,10 \u20AC m\xE1s, ya no lo comprar\xEDas.Una vez indicado el precio, deber\xE1s
-    pulsar el bot\xF3n \u201CA\xF1adir\u201D para meterlo en la cesta.\n\nUna vez
-    seleccionada cada opci\xF3n en los tres productos, aparecer\xE1 un desplegable
+    pulsar el bot\xF3n \u201CA\xF1adir\u201D para meterlo en la cesta.\n PONER VIDEO\nUna
+    vez seleccionada cada opci\xF3n en los tres productos, aparecer\xE1 un desplegable
     que te preguntar\xE1 si est\xE1s seguro/a de tus respuestas. Si est\xE1s seguro/a,
     deber\xE1s seleccionar \u201CS\xED\u201D, lo que activar\xE1 el bot\xF3n \u201CComprar\u201D.
     En caso de que desees modificar alguna respuesta, selecciona \u201CNo\u201D y
@@ -39296,6 +39377,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1864002280}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2058956146}
+        m_TargetAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -47167,7 +47260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   textoAsociado: {fileID: 532870524}
-  VideoCocinero: {fileID: 0}
+  VideoReproducido: {fileID: 0}
   ActivarTrasVideo: {fileID: 0}
 --- !u!1 &1990630845
 GameObject:
@@ -48194,6 +48287,78 @@ RectTransform:
   m_AnchoredPosition: {x: -5.5027466, y: 31.50885}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2058956144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058956145}
+  - component: {fileID: 2058956146}
+  m_Layer: 5
+  m_Name: Video Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2058956145
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058956144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1165601510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!328 &2058956146
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058956144}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 04e03fe86cc5b5148ac7a59de30ad2cd, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 020cb31167ca82242beccb2db992d7da, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1001 &2062118997
 PrefabInstance:
   m_ObjectHideFlags: 0
