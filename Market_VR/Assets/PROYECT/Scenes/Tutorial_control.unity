@@ -4840,7 +4840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1503989109714432937, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2077641819426116279, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
       propertyPath: m_text
@@ -6184,7 +6184,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xA1Hola! Antes de comenzar la prueba, vamos a utilizar este espacio para
     explicarte  de qu\xE9 va el experimento.\n\nPero primero, vamos a indicarte c\xF3mo
-    utilizar los mandos. Para interactuar con los objetos y botones , hay que pulsar
+    utilizar los mandos. Para interactuar con los objetos y botones, hay que pulsar
     el bot\xF3n que se indica a continuaci\xF3n:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -6965,6 +6965,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8108794592199166444, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 341549a365796f14a8932b974150913c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
