@@ -426,7 +426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.9000244, y: -150}
+  m_AnchoredPosition: {x: 3.9000244, y: -135.6}
   m_SizeDelta: {x: 164.2, y: 458.3}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &212848730
@@ -452,10 +452,11 @@ MonoBehaviour:
   m_text: "Las gafas de realidad virtual que llevas puestas incorporan un sistema
     de seguimiento ocular. Este sistema registrar\xE1 hacia d\xF3nde diriges la mirada,
     con el objetivo de analizar posteriormente si las acciones que realices est\xE1n
-    relacionadas con aquello que est\xE1s observando.\n\nAl pulsar Comenzar, aparecer\xE1
-    una X en la pantalla que se ir\xE1 desplazando por distintas posiciones. Es importante
-    que mires fijamente cada una de las X hasta que termine la secuencia.\n\nCuando
-    est\xE9s listo, pulsa Comenzar."
+    relacionadas con aquello que est\xE1s observando.\n\n\xA1Vamos a calibrar el
+    equipo! Antes de empezar, en una pantalla ir\xE1 apareciendo una X que se mover\xE1
+    y tendr\xE1s que seguir con la mirada. \n\nEs importante que mires fijamente
+    cada una de las X hasta que termine la secuencia.\n\nCuando est\xE9s listo, pulsa
+    Comenzar."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -1669,7 +1670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.56, y: -5}
+  m_AnchoredPosition: {x: -16.56, y: 1.1}
   m_SizeDelta: {x: 169.92, y: 101.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426012798
@@ -2187,7 +2188,7 @@ RectTransform:
   m_GameObject: {fileID: 657551704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1.1}
-  m_LocalScale: {x: 1.2037375, y: 1.2062557, z: 1.2037375}
+  m_LocalScale: {x: 1.5229686, y: 1.5261548, z: 1.5229686}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 808717573}
@@ -2195,7 +2196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 252, y: -218}
+  m_AnchoredPosition: {x: 7.1, y: -214}
   m_SizeDelta: {x: 111.7, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &657551706
@@ -4839,7 +4840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1503989109714432937, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2077641819426116279, guid: dc067c577ec1b854684d789b6e727cc0, type: 3}
       propertyPath: m_text
@@ -6510,7 +6511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.07, y: -199}
+  m_AnchoredPosition: {x: 6.07, y: -201.4}
   m_SizeDelta: {x: 93.31, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904709554
@@ -7018,7 +7019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: SUPERMARKET
   textoAsociado: {fileID: 0}
-  VideoReproducido: {fileID: 0}
+  VideoReproducido: {fileID: 1325370068}
   ActivarTrasVideo: {fileID: 657551706}
 --- !u!4 &2037992973
 Transform:
