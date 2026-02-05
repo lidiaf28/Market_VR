@@ -20880,7 +20880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d1f65fb1ece8d4683d998c6226ee33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sujeto: 28
+  sujeto: 31
   csvFileName: orden_productos.csv
   productoA: {fileID: 1112868111}
   productoB: {fileID: 1969460580}
