@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: fe2a17941518d8f429988cd2161cd13b, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 317b6e9f91bcd03458d1838bf17cb636, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -20880,7 +20880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d1f65fb1ece8d4683d998c6226ee33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sujeto: 41
+  sujeto: 48
   csvFileName: orden_productos.csv
   productoA: {fileID: 1112868111}
   productoB: {fileID: 1969460580}
