@@ -20880,7 +20880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d1f65fb1ece8d4683d998c6226ee33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sujeto: 99
+  sujeto: 100
   csvFileName: orden_productos.csv
   productoA: {fileID: 1112868111}
   productoB: {fileID: 1969460580}
@@ -51284,11 +51284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2631684796507614525, guid: 171dc1c4751f7e24fb8ca2618bc92e83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0626
+      value: 0.073
       objectReference: {fileID: 0}
     - target: {fileID: 2631684796507614525, guid: 171dc1c4751f7e24fb8ca2618bc92e83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0451
+      value: -0.045
       objectReference: {fileID: 0}
     - target: {fileID: 2631684796507614525, guid: 171dc1c4751f7e24fb8ca2618bc92e83, type: 3}
       propertyPath: m_LocalPosition.z
