@@ -18,10 +18,10 @@ public class FunctionsController : MonoBehaviour
     void Start()
     {
         // Por si acaso, desactivamos el botón al inicio
-        ActivarTrasVideo.interactable = false;
+        //ActivarTrasVideo.interactable = false;
 
         // Nos suscribimos al evento de fin de vídeo
-        VideoReproducido.loopPointReached += OnVideoFinished;
+        //VideoReproducido.loopPointReached += OnVideoFinished;
     }
 
 

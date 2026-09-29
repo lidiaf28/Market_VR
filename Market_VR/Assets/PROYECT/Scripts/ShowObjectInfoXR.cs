@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using static ReadyPlayerMe.Core.Analytics.Constants;
-using static Unity.Burst.Intrinsics.Arm;
-
 public class ShowObjectInfoXR : MonoBehaviour
 {
     [Header("Panel de informacion")]

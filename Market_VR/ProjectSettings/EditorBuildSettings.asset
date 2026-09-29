@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/PROYECT/Scenes/SUPERMARKET.unity
-    guid: 4e0552cf4b5892d42b5762333f66f7d8
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 55daccc09a3b69647bbab145b54a3ab3
+    path: Assets/PROYECT/Scenes/TutorialLite.unity
+    guid: 4c3a5dd87d64e9040bdd390f5a600e1c
+  - enabled: 1
+    path: Assets/PROYECT/Scenes/SUPERMARKETLite.unity
+    guid: 2e849a1c690aba0418c094a9bcb9fad1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
